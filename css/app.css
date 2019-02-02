@@ -1,0 +1,259 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+/* header */
+
+.container__logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex; 
+}
+
+.header__content {
+    width: 660px;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #005f6a; 
+}
+
+.header__left {
+    width: 60%;
+    float: left;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__right {
+    width: 40%;
+    float: right;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    padding: 0px;
+    margin: 10px;
+    max-width: 250px;
+    min-width: 180px;
+    float:left;
+}
+
+.header__name {
+    text-align: center;
+    color: #6a002a;
+    font-size: 25px;
+    padding: 0px;
+    float: right;
+    
+}
+
+.names__red {
+    color: #6a002a;
+}
+
+#header__description {
+    text-transform: lowercase;
+    font-size: 20px;
+    padding: 0px;
+    float: right;
+}
+
+/* app-only relevant css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/*
+ * Styles for the deck of cards
+*/ 
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+.deck .card.end {
+    display: none;
+}
+
+.won {
+    background-image: url('../img/winner.png');
+    padding: 2em;
+}
+
+.winner {
+    font-size: 25px;
+    padding: 25px;
+    margin-top: 130px;
+    text-align: center;
+    font-style: bold;
+    color: #005f69;
+    background-color: rgba(255, 255, 255, 0.3);
+    list-style: none;
+}
+
+.play__again {
+    cursor: pointer;
+    text-align: center;
+    font-style: bold;
+    font-size: 30px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel #first__star {
+    color: red;
+}
+
+.score-panel #second__star {
+    color: blue;
+}
+
+.score-panel #third__star {
+    color: blueviolet;
+}
+
+.score-panel .star__white {
+    color: white;
+}
+
+.score-panel .check {
+    margin: 0;
+    padding: 0;
+    display: none;
+    margin: 0 0 0 5px;
+    color: blueviolet; 
+   }
+
+.score-panel .check li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .winner-check {
+    display: inline-block;
+}
+
+.score-panel .seconds {
+    margin: 0;
+    padding: 0 20px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-top: 3px solid #6a002a;
+}
+
+.footer__description {
+    padding: 1em;
+    text-align: center;
+}
